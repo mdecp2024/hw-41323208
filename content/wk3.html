@@ -2,7 +2,7 @@
         <head>
         <title>cp_hw</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -130,7 +130,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='about.html'>about</a><li><a href='Attendance.html'>Attendance</a><li><a href='WK.html'>WK</a><li class='has-children'><a href='Hardware 1.html'>Hardware 1</a><ul class='dropdown'><li><a href='Hardware 1 exam.html'>Hardware 1 exam</a></li></ul><li class='has-children'><a href='Carbide 2.html'>Carbide 2</a><ul class='dropdown'><li><a href='Hardware 2 exam.html'>Hardware 2 exam</a></li></ul><li class='has-children'><a href='Carbide 3.html'>Carbide 3</a><ul class='dropdown'><li><a href='Hardware 3 exam.html'>Hardware 3 exam</a></li></ul><li class='has-children'><a href='Carbide 4.html'>Carbide 4</a><ul class='dropdown'><li><a href='Hardware 4 exam.html'>Hardware 4 exam</a></li></ul><li><a href='final report.html'>final report</a></li>
+                     <li><a href='about.html'>about</a><li><a href='Attendance.html'>Attendance</a><li class='has-children'><a href='Hardware 1.html'>Hardware 1</a><ul class='dropdown'><li><a href='Hardware 1 exam.html'>Hardware 1 exam</a></li></ul><li class='has-children'><a href='Carbide 2.html'>Carbide 2</a><ul class='dropdown'><li><a href='Hardware 2 exam.html'>Hardware 2 exam</a><li><a href='wk2.html'>wk2</a><li><a href='wk3.html'>wk3</a></li></ul><li class='has-children'><a href='Carbide 3.html'>Carbide 3</a><ul class='dropdown'><li><a href='Hardware 3 exam.html'>Hardware 3 exam</a></li></ul><li class='has-children'><a href='Carbide 4.html'>Carbide 4</a><ul class='dropdown'><li><a href='Hardware 4 exam.html'>Hardware 4 exam</a></li></ul><li><a href='final report.html'>final report</a></li>
                       </ul>
                 </nav>
               </div>
@@ -141,18 +141,25 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Attendance << <a href='Attendance.html'>Previous</a> <a href='Hardware 1.html'>Next</a> >> Hardware 1<br /><h1>WK</h1>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def draw_triangle():
-    height = 5  # 三角形高度
-    for i in range(height):
-        spaces = ' ' * (height - i - 1)  # 计算空格数
-        stars = '*' * (2 * i + 1)        # 计算星号数
-        print(spaces + stars)
-
-draw_triangle()
-</pre>
+    <div id="tipue_search_content">wk2 << <a href='wk2.html'>Previous</a> <a href='Carbide 3.html'>Next</a> >> Carbide 3<br /><h1>wk3</h1>
+<p></p>
+<p>操作步驟:</p>
+<ol>
+<li>下載 <a href="http://229.cycu.org/python_2025_lite.7z">python_2025_lite.7z</a> (可攜程式環境)</li>
+<li>下載<span> </span><a href="https://mde.tw/cp2024/downloads/zmq_remote_api_ex_cube_triangle.7z">zmq_remote_api_ex_cube_triangle.7z</a> (利用 Python 控制模擬場景中的物件)</li>
+<li>進入可攜程式環境中 data/CoppeliaSim 目錄, 開啟 coppeliaSim.exe (機電整合模擬程式,<span> </span><a href="https://github.com/CoppeliaRobotics">原始碼</a>)</li>
+<li>啟動可攜程式環境, 雙點擊 start_ipv6.bat, 系統會啟動四個命令列, 兩個 SciTE 編輯器</li>
+<li>執行場景控制程式前, 先處理操作系統的防火牆, 將下列指令存為 .bat 檔案後, 以管理員身分執行, 以便開啟 23000-23050 埠號進出:</li>
+<li>netsh advfirewall firewall add rule name="allow_23000-23050" dir=in action=allow protocol=TCP localport=23000-23050<br/>netsh advfirewall firewall add rule name="allow_23000-23050" dir=out action=allow protocol=TCP localport=23000-23050</li>
+<li>開啟 CoppeliaSim 中的視覺串流伺服器: Modules - Connectivity - Visualization stream</li>
+<li>利用 SciTE 開啟 put_cubes_into_scene_1.py, 利用 Tools - Go 執行操控程式</li>
+<li>使用者可以透過瀏覽器, 以模擬場景所在電腦的 IP, 且埠號為 23020 觀看模擬場景</li>
+</ol>
+<hr/>
+<p><a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/eb2e4327b65a0fe5c307ea329ef2f69c/raw/18b3cdd1f9bbef6ff913cc88293a8ebb7e028520/1a_w3_site_repo_brython.py">1a site and re</a></p>
+<span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></span></span>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></span></span></p>
-<br />Attendance << <a href='Attendance.html'>Previous</a> <a href='Hardware 1.html'>Next</a> >> Hardware 1</div>
+<br />wk2 << <a href='wk2.html'>Previous</a> <a href='Carbide 3.html'>Next</a> >> Carbide 3</div>
         
     <!-- footer -->
       <div class="container">
