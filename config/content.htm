@@ -96,8 +96,30 @@ draw_triangle()
 <h2>wk11</h2>
 <p>心得：chatGPT很好的幫我解決了python程式上不理解的問題 還用python繪製圖案</p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/m01Zu-SoXIA" width="560"></iframe></p>
-<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></span></span></p>
-<h1>HW 3</h1>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></span></span>以下為 12 號的程式:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import math
+
+def draw_circle_10x10():
+    size = 10  # 固定為 10x10 的字元區域
+    radius = 4.5  # 使用半徑 4.5 來製作圓形，優先填滿 10x10 區域
+    center = (size - 1) / 2  # 圓心位置在 10x10 區域的正中央
+
+    # 建立 10x10 的字元矩陣
+    for y in range(size):
+        for x in range(size):
+            # 計算 (x, y) 到圓心的距離
+            distance = math.sqrt((x - center) ** 2 + (y - center) ** 2)
+            # 使用範圍判斷來決定是否填入 '*'
+            if radius - 0.5 &lt;= distance &lt;= radius + 0.5:
+                print('*', end='')
+            else:
+                print(' ', end='')
+        print()  # 列印每一行後換行
+
+# 執行 10x10 圓形繪製
+draw_circle_10x10()
+</pre>
+<p></p><h1>HW 3</h1>
 <h4><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Topic: Numbers, Algorithms and Loops in Python (20%)</span></span></span></span></h4>
 <p style="padding-left: 30px;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Python course materials: </span></span></span></span><a href="https://www.learnpythonwithjupyter.com/"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">https://www.learnpythonwithjupyter.com/</span></span></span></span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"> - PART 4 and Part 5</span></span></span></span></p>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">After completing the above process, enter the HW3 self-evaluation score into the cp2024 self-evaluation form.</span></span></span></span></p>
