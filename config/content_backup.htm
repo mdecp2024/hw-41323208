@@ -96,8 +96,8 @@ draw_triangle()
 <h2>wk11</h2>
 <p>心得：chatGPT很好的幫我解決了python程式上不理解的問題 還用python繪製圖案</p>
 <p><a href="https://mdecp2024.github.io/hw-41323208/content/Brython.html?src=https://gist.githubusercontent.com/41323208/610125c7ac0abea409dd668f78c45aba/raw/6879c82aae05c13ecec22176e32dd3c7a00045bb/hw11_2.py">题目一</a></p>
-<p><a href="https://mdecp2024.github.io/hw-41323208/content/Brython.html?src=https://gist.githubusercontent.com/41323208/610125c7ac0abea409dd668f78c45aba/raw/6879c82aae05c13ecec22176e32dd3c7a00045bb/hw11_2.py">题目二</a></p>
-<p>-----------------------------------------------------------------------------------------------------------------</p>
+<p><a href="https://mdecp2024.github.io/hw-41323208/content/Brython.html?src=https://gist.githubusercontent.com/41323208/610125c7ac0abea409dd668f78c45aba/raw/61b4a6dcd59c36289d1756f7ab2b0b52b337d360/hw11_2.py">题目二</a></p>
+<p style="text-align: center;">-----------------------------------------------------------------------------------------------------------------</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def print_filled_circle(radius, center_x, center_y, size=10):
     for y in range(size):
         for x in range(size):
@@ -127,13 +127,19 @@ gs = 20
 # 获取画布的 2D 上下文
 ctx = canvas.getContext("2d")
 
-# 绘制矩形的函数，带黑色填充
-def dRect(lux, luy, w, h, c='#ff0000'):
-    ctx.fillStyle = c  # 填充颜色
-    ctx.fillRect(lux, luy, w, h)  # 绘制填充矩形
+# 绘制带白色边框的矩形（黑色填充）
+def dRect(lux, luy, w, h, fill_color='#000000', border_color='#ffffff', border_width=2):
+    # 先填充黑色
+    ctx.fillStyle = fill_color
+    ctx.fillRect(lux, luy, w, h)
+    
+    # 再绘制白色边框
+    ctx.lineWidth = border_width
+    ctx.strokeStyle = border_color
+    ctx.strokeRect(lux, luy, w, h)
 
-# 绘制由黑色方块拼成的圆形图案
-def drawCircleWithFilledBlackSquares(radius):
+# 绘制由黑色方块和白色边框拼成的圆形图案
+def drawCircleWithBlackSquaresAndWhiteBorders(radius):
     # 画布的中心点
     cx, cy = canvas.width // 2, canvas.height // 2
     # 计算网格数
@@ -144,12 +150,12 @@ def drawCircleWithFilledBlackSquares(radius):
             y = cy + j
             # 计算该网格到中心的距离
             dist = (i ** 2 + j ** 2) ** 0.5
-            # 如果该网格的距离小于圆的半径，填充方块
+            # 如果该网格的距离小于圆的半径，填充方块并绘制边框
             if dist &lt; radius:
-                dRect(x, y, gs, gs, "black")  # 填充黑色
+                dRect(x, y, gs, gs, fill_color="black", border_color="white", border_width=1)  # 黑色填充，白色边框
 
-# 绘制由黑色方块填充的圆形
-drawCircleWithFilledBlackSquares(100)</pre>
+# 绘制由黑色方块和白色边框填充的圆形
+drawCircleWithBlackSquaresAndWhiteBorders(100)</pre>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/m01Zu-SoXIA" width="560"></iframe></p>
 <p></p>
 <p></p>
