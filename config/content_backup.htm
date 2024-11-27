@@ -95,6 +95,21 @@ draw_triangle()
 <p></p>
 <h2>wk11</h2>
 <p>心得：chatGPT很好的幫我解決了python程式上不理解的問題 還用python繪製圖案</p>
+<p>题目一<a href="https://gist.githubusercontent.com/41323208/610125c7ac0abea409dd668f78c45aba/raw/6879c82aae05c13ecec22176e32dd3c7a00045bb/hw11_1.py">https://gist.githubusercontent.com/41323208/610125c7ac0abea409dd668f78c45aba/raw/6879c82aae05c13ecec22176e32dd3c7a00045bb/hw11_1.py</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def print_filled_circle(radius, center_x, center_y, size=10):
+    for y in range(size):
+        for x in range(size):
+            # 計算 (x, y) 點到圓心的距離
+            distance = (x - center_x) ** 2 + (y - center_y) ** 2
+            # 如果距離小於或等於半徑的平方，則是圓內的點，打印 *
+            if distance &lt;= radius ** 2:
+                print('*', end='')
+            else:
+                print(' ', end='')
+        print()
+
+# 設定圓心在 (4, 4)，半徑為 4
+print_filled_circle(radius=4, center_x=4, center_y=4)</pre>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/m01Zu-SoXIA" width="560"></iframe></p>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></span></span></p>
 <h1>HW 3</h1>

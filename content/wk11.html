@@ -144,6 +144,9 @@ img.add_border {
     <div id="tipue_search_content">wk3 << <a href='wk3.html'>Previous</a> <a href='HW 3.html'>Next</a> >> HW 3<br /><h1>wk11</h1>
 <p>心得：chatGPT很好的幫我解決了python程式上不理解的問題 還用python繪製圖案</p>
 <p>题目一<a href="https://gist.githubusercontent.com/41323208/610125c7ac0abea409dd668f78c45aba/raw/6879c82aae05c13ecec22176e32dd3c7a00045bb/hw11_1.py">https://gist.githubusercontent.com/41323208/610125c7ac0abea409dd668f78c45aba/raw/6879c82aae05c13ecec22176e32dd3c7a00045bb/hw11_1.py</a></p>
+<p>题目二</p>
+<p><a href="https://gist.githubusercontent.com/41323208/610125c7ac0abea409dd668f78c45aba/raw/6879c82aae05c13ecec22176e32dd3c7a00045bb/hw11_2.py">https://gist.githubusercontent.com/41323208/610125c7ac0abea409dd668f78c45aba/raw/6879c82aae05c13ecec22176e32dd3c7a00045bb/hw11_2.py</a></p>
+<p></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def print_filled_circle(radius, center_x, center_y, size=10):
     for y in range(size):
         for x in range(size):
@@ -158,7 +161,47 @@ img.add_border {
 
 # 設定圓心在 (4, 4)，半徑為 4
 print_filled_circle(radius=4, center_x=4, center_y=4)</pre>
+<p></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+
+# 创建画布
+canvas = html.CANVAS(width=400, height=400)
+brython_div = doc["brython_div1"]
+brython_div &lt;= canvas
+
+# 每个方块的大小
+gs = 20
+
+# 获取画布的 2D 上下文
+ctx = canvas.getContext("2d")
+
+# 绘制矩形的函数，带黑色填充
+def dRect(lux, luy, w, h, c='#ff0000'):
+    ctx.fillStyle = c  # 填充颜色
+    ctx.fillRect(lux, luy, w, h)  # 绘制填充矩形
+
+# 绘制由黑色方块拼成的圆形图案
+def drawCircleWithFilledBlackSquares(radius):
+    # 画布的中心点
+    cx, cy = canvas.width // 2, canvas.height // 2
+    # 计算网格数
+    for i in range(-radius, radius, gs):
+        for j in range(-radius, radius, gs):
+            # 当前网格的中心坐标
+            x = cx + i
+            y = cy + j
+            # 计算该网格到中心的距离
+            dist = (i ** 2 + j ** 2) ** 0.5
+            # 如果该网格的距离小于圆的半径，填充方块
+            if dist &lt; radius:
+                dRect(x, y, gs, gs, "black")  # 填充黑色
+
+# 绘制由黑色方块填充的圆形
+drawCircleWithFilledBlackSquares(100)</pre>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/m01Zu-SoXIA" width="560"></iframe></p>
+<p></p>
+<p></p>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></span></span></p>
 <br />wk3 << <a href='wk3.html'>Previous</a> <a href='HW 3.html'>Next</a> >> HW 3</div>
         
