@@ -166,7 +166,7 @@ drawCircleWithBlackSquaresAndWhiteBorders(100)</pre>
 <p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
 <p>======= &gt;&gt;&gt;&gt;&gt;&gt;&gt; 21ef0d6bb28c38689d4465279b98af9102559228</p>
 <p></p>
-<h3>wk12</h3>
+<h2>wk12</h2>
 <p><a href="https://gist.githubusercontent.com/41323208/610125c7ac0abea409dd668f78c45aba/raw/7c4b655c80766bc735a043b58cb78ef240e5adb2/wk12.1.py">题目一</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">n = 11
 space = '_'
@@ -176,6 +176,42 @@ center = n//2
 for y in range(n):
   for x in range(n):
     print("(", x, ",", y, ")")</pre>
+<p><a href="https://mdecp2024.github.io/hw-41323208/content/Brython.html?src=https://gist.githubusercontent.com/41323208/610125c7ac0abea409dd668f78c45aba/raw/8d128048bf921a226c252c13b7f8ea9275e5468b/hw12.2.py">题目二</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+
+#利用 html 建立 canvas 超文件物件
+canvas = html.CANVAS(width = 400, height = 400)
+brython_div = doc["brython_div1"]
+brython_div &lt;= canvas
+
+#每一格的 pixel数
+gs = 20
+
+#gste canvas width and height
+ctx = canvas.getContext("2d")
+
+width = 11
+height = 11
+
+'''
+ctx.lineWidth = 1
+ctx.strokeStyle = 'lightgrey'
+ctx.beginPath()
+#ctx.rect(i*gs, j"gs, gs, gs)
+ctx.rect(0, 0, 150, 100)
+ctx.stroke()
+'''
+
+for i in range(width):
+    for j in range(height):
+        ctx.lineWidth = 1
+        ctx.strokeStyle = 'lightgrey'
+        ctx.beginPath();
+        ctx.rect(i*gs, j*gs, gs, gs)
+        ctx.stroke();
+#dRect(igs.jgs, gs, gs. 1, lightgrey")
+</pre>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></span></span></p>
 <h1>HW 3</h1>
 <p></p>
