@@ -95,9 +95,14 @@ draw_triangle()
 <p></p>
 <h2>wk11</h2>
 <p>心得：chatGPT很好的幫我解決了python程式上不理解的問題 還用python繪製圖案</p>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 <p><a href="https://mdecp2024.github.io/hw-41323208/content/Brython.html?src=https://gist.githubusercontent.com/41323208/610125c7ac0abea409dd668f78c45aba/raw/6879c82aae05c13ecec22176e32dd3c7a00045bb/hw11_1.py">题目一</a></p>
 <p><a href="https://mdecp2024.github.io/hw-41323208/content/Brython.html?src=https://gist.githubusercontent.com/41323208/610125c7ac0abea409dd668f78c45aba/raw/6879c82aae05c13ecec22176e32dd3c7a00045bb/hw11_2.py">题目二</a></p>
-<p></p>
+=======
+<p><a href="https://mdecp2024.github.io/hw-41323208/content/Brython.html?src=https://gist.githubusercontent.com/41323208/610125c7ac0abea409dd668f78c45aba/raw/6879c82aae05c13ecec22176e32dd3c7a00045bb/hw11_2.py">题目一</a></p>
+<p><a href="https://mdecp2024.github.io/hw-41323208/content/Brython.html?src=https://gist.githubusercontent.com/41323208/610125c7ac0abea409dd668f78c45aba/raw/6879c82aae05c13ecec22176e32dd3c7a00045bb/hw11_2.py">题目二</a></p>
+<p>-----------------------------------------------------------------------------------------------------------------</p>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 74d7267f6b2f6bd00b6d4ffb9524e5a0b6ea70d1
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def print_filled_circle(radius, center_x, center_y, size=10):
     for y in range(size):
         for x in range(size):
@@ -112,7 +117,7 @@ draw_triangle()
 
 # 設定圓心在 (4, 4)，半徑為 4
 print_filled_circle(radius=4, center_x=4, center_y=4)</pre>
-<p></p>
+<p>-----------------------------------------------------------------------------------------------------------------</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
 from browser import document as doc
 
@@ -151,30 +156,7 @@ def drawCircleWithFilledBlackSquares(radius):
 # 绘制由黑色方块填充的圆形
 drawCircleWithFilledBlackSquares(100)</pre>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/m01Zu-SoXIA" width="560"></iframe></p>
-<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></span></span>以下為 12 號的程式:</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import math
-
-def draw_circle_10x10():
-    size = 10  # 固定為 10x10 的字元區域
-    radius = 4.5  # 使用半徑 4.5 來製作圓形，優先填滿 10x10 區域
-    center = (size - 1) / 2  # 圓心位置在 10x10 區域的正中央
-
-    # 建立 10x10 的字元矩陣
-    for y in range(size):
-        for x in range(size):
-            # 計算 (x, y) 到圓心的距離
-            distance = math.sqrt((x - center) ** 2 + (y - center) ** 2)
-            # 使用範圍判斷來決定是否填入 '*'
-            if radius - 0.5 &lt;= distance &lt;= radius + 0.5:
-                print('*', end='')
-            else:
-                print(' ', end='')
-        print()  # 列印每一行後換行
-
-# 執行 10x10 圓形繪製
-draw_circle_10x10()
-</pre>
-<p></p><h1>HW 3</h1>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></span></span></p><h1>HW 3</h1>
 <p></p>
 <h4><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Topic: Numbers, Algorithms and Loops in Python (20%)</span></span></span></span></h4>
 <p style="padding-left: 30px;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Python course materials: </span></span></span></span><a href="https://www.learnpythonwithjupyter.com/"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">https://www.learnpythonwithjupyter.com/</span></span></span></span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"> - PART 4 and Part 5</span></span></span></span></p>
