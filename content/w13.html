@@ -192,6 +192,66 @@ ctx.fillRect(second_x + second_border_width, second_y + second_border_width, sec
 
 # 顯示 canvas
 </pre>
+<p><a href="https://mdecp2024.github.io/hw-41323208/content/Brython.html?src=https://gist.githubusercontent.com/41323208/610125c7ac0abea409dd668f78c45aba/raw/7aacf07ec234aabd17590cde1dd3d234fd827e4f/w13_1.py">程式二</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+
+# 利用 html 建立 canvas 超文件物件，設定為 600x600 像素
+canvas = html.CANVAS(width=600, height=600)  # 增加畫布的大小
+brython_div = doc["brython_div1"]
+brython_div &lt;= canvas
+
+# 設定 canvas 相關參數
+ctx = canvas.getContext("2d")
+
+# 設置圓形的邊框寬度
+circle_border_width = 1
+
+# 先畫圓形1（天晴色圓形）
+circle_center_x = 250  # 圓心x坐標（畫布的正中心）
+circle_center_y = 250  # 圓心y坐標（畫布的正中心）
+circle_radius = 141.4  # 圓的半徑
+
+ctx.beginPath()
+ctx.arc(circle_center_x, circle_center_y, circle_radius, 0, 2 * 3.1416)  # 畫圓
+ctx.fillStyle = 'skyblue'  # 填充顏色設為天晴色
+ctx.fill()  # 填充圓形
+ctx.strokeStyle = 'black'  # 邊框顏色設置為黑色
+ctx.lineWidth = circle_border_width  # 邊框寬度設置為1
+ctx.stroke()  # 畫出圓形的邊框
+
+# 新增第二個圓形（淺綠色圓形）
+second_circle_center_x = 350  # 第二個圓形的圓心x坐標
+second_circle_center_y = 350  # 第二個圓形的圓心y坐標
+second_circle_radius = 141.4  # 第二個圓形的半徑
+
+# 先畫第二個圓形（淺綠色圓形）
+ctx.beginPath()
+ctx.arc(second_circle_center_x, second_circle_center_y, second_circle_radius, 0, 2 * 3.1416)  # 畫圓
+ctx.fillStyle = 'lightgreen'  # 填充顏色設為淺綠色
+ctx.fill()  # 填充圓形
+ctx.strokeStyle = 'black'  # 邊框顏色設置為黑色
+ctx.lineWidth = circle_border_width  # 邊框寬度設置為1
+ctx.stroke()  # 畫出圓形的邊框
+
+# 畫第一個紅色方框（內部透明，邊框紅色）
+ctx.fillStyle = 'transparent'  # 內部填充為透明
+ctx.fillRect(150, 150, 200, 200)  # 填充矩形區域（不會顯示顏色，因為是透明的）
+ctx.strokeStyle = 'red'  # 邊框顏色設為紅色
+ctx.lineWidth = 1  # 邊框寬度設為1
+ctx.strokeRect(150, 150, 200, 200)  # 畫紅色邊框
+
+# 畫第二個紅色方框（內部透明，邊框紅色）
+second_x = 250  # 第二個方框的 x 坐標，設置為第一個方框的右下角 x 坐標
+second_y = 250  # 第二個方框的 y 坐標，設置為第一個方框的右下角 y 坐標
+ctx.fillStyle = 'transparent'  # 內部填充為透明
+ctx.fillRect(second_x, second_y, 200, 200)  # 填充矩形區域（不會顯示顏色，因為是透明的）
+ctx.strokeStyle = 'red'  # 邊框顏色設為紅色
+ctx.lineWidth = 1  # 邊框寬度設為1
+ctx.strokeRect(second_x, second_y, 200, 200)  # 畫紅色邊框
+
+# 顯示 canvas</pre>
+<p></p>
 <br />w12_hw << <a href='w12_hw.html'>Previous</a> <a href='HW 3.html'>Next</a> >> HW 3</div>
         
     <!-- footer -->

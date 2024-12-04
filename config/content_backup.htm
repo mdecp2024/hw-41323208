@@ -220,6 +220,58 @@ for i in range(width):
 <p><strong><span style="color: #ff0000;">第六題——取其中數</span></strong></p>
 <p>程式一：<a href="https://mdecp2024.github.io/hw-41323208/content/Brython.html?src=https://gist.githubusercontent.com/41323208/610125c7ac0abea409dd668f78c45aba/raw/fde78b9eede5fc2b887158f82502b260763989bb/hw12_6.py">Town</a></p>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></span></span></p>
+<h2><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">w13</span></span></span></span></h2>
+<p><a href="https://mdecp2024.github.io/hw-41323208/content/Brython.html?src=https://gist.githubusercontent.com/41323208/610125c7ac0abea409dd668f78c45aba/raw/022f8eeb164d315afdff7873319ad4065287d9eb/w13.py">程式一</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+
+# 利用 html 建立 canvas 超文件物件，設定為 400x400 像素
+canvas = html.CANVAS(width=400, height=400)  # 增加畫布的大小以顯示第二個方框
+brython_div = doc["brython_div1"]
+brython_div &lt;= canvas
+
+# 設定 canvas 相關參數
+ctx = canvas.getContext("2d")
+
+# 設置最細邊框的寬度
+border_width = 1
+
+# 畫第一個紅色邊框
+ctx.fillStyle = 'red'
+# 上邊框
+ctx.fillRect(0, 0, 200, border_width)
+# 下邊框
+ctx.fillRect(0, 200 - border_width, 200, border_width)
+# 左邊框
+ctx.fillRect(0, 0, border_width, 200)
+# 右邊框
+ctx.fillRect(200 - border_width, 0, border_width, 200)
+
+# 畫第一個白色中心方形
+ctx.fillStyle = 'white'
+ctx.fillRect(border_width, border_width, 200 - 2 * border_width, 200 - 2 * border_width)
+
+# 第二個方框的大小（200x200）
+second_border_width = 1
+second_width = 200  # 第二個方框的寬度，擴大為 200
+second_height = 200  # 第二個方框的高度，擴大為 200
+
+# 計算第二個方框的左上角位置，使其整體位於第一個方框的右下角
+second_x = 100  # 第二個方框的 x 坐標，設置為 200
+second_y = 100  # 第二個方框的 y 坐標，設置為 200
+
+# 畫第二個紅色邊框
+ctx.strokeStyle = 'red'  # 邊框顏色設置為紅色
+ctx.lineWidth = second_border_width  # 邊框寬度設置為最細
+ctx.strokeRect(second_x, second_y, second_width, second_height)  # 畫紅色邊框
+
+# 填充透明的中心區域（不填充顏色）
+ctx.fillStyle = 'transparent'
+ctx.fillRect(second_x + second_border_width, second_y + second_border_width, second_width - 2 * second_border_width, second_height - 2 * second_border_width)
+
+# 顯示 canvas
+</pre>
 <h1>HW 3</h1>
 <p></p>
 <h4><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Topic: Numbers, Algorithms and Loops in Python (20%)</span></span></span></span></h4>
